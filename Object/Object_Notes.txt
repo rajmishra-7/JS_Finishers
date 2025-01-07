@@ -1,0 +1,183 @@
+Object:
+
+-Reference type.
+-Similar to real world objects which has some properties and behaviours.
+-Instead of writing properties like name and age separately, we can combine them in an object to maintain a cleaner code.
+-To Declare an object we use 'object literals' -> {}
+-Inside object we can have one or more key value pairs, where key is property and value is that property's value.
+
+for example- 
+    let person = {
+        name: 'John',
+        age: 30
+    };
+
+#How to access object properties-
+
+1. Dot Notation - we can use a '.' dot operator followed by the property name to access or modify that property of the object.
+
+for example-
+    console.log(person.name);
+    person.age = 27;
+
+2. Bracket Notation - we can also use brackets '[]' to access or modify the properties of an object. We need to give the property
+name with single or double quotes inside the bracket to access or modify that property.
+
+for example-
+    console.log(person['name']);
+    person['age'] = 27;
+
+*Better Practice - Dot Notation, as it is more concise and clean compared to Bracket Notation. Sometimes we don't know the property
+name when we want to use the property dynamically then we need to use Bracket Notation. In that case we cannot use dot Notation.
+
+for example-
+    let selection = 'name';
+    console.log(person[selection]);
+
+#Types of values in object-
+
+-We can have any type of data as value in an object. 
+
+// Object-oriented Programming (OOP)
+for example-
+    const circle = {
+        radius : 1, // number type value
+        location: { // another object type as value
+            x : 1,
+            y : 1
+        },
+        isVisible = true, // boolean type value
+        draw : function() { // function type as value
+            console.log('draw');
+        }
+    };
+
+*This way of writing properties and functions inside an object is known as object oriented programming (OOP).
+*The Function inside any object is called 'Method' in OOP.
+
+#Object Creation-
+
+-In Javascript, functions are created using 2 ways:
+    -Factory function
+    -Constructor function
+
+#Factory Function-
+-This FF produces object.
+
+for example-
+    function createCircle() {
+        return {
+            radius : 1,
+            draw : function() {
+                console.log('draw');
+            }
+        };
+    }
+
+*Instead of hardcoding values of radius and other properties, we can use parameters.
+
+    function createCircle(radius) {
+        return {
+            radius : radius,
+            draw : function() {
+                console.log('draw');
+            }
+        };
+    }
+
+*In Javascript, if key and value are same, we can simply write the value.
+*We also have a shorter way of writing methods in object.
+
+    function createCircle(radius) {
+        return {
+            radius,
+            draw() {
+                console.log('draw');
+            }
+        };
+    }
+
+-Creation of object using above Factory function:
+    
+    const circle1 = createCircle(1); // 1 is passed as an argument to Factory function.
+    const circle2 = createCircle(2);
+
+#Constructor Function-
+-It constructs and create an object.
+-Constructor functions are written in Pascal notation. 
+
+//Camel Notation - oneTwoThreeFour
+//Pascal Notation - oneTwoThreeFour
+
+Syntax example-
+    function Circle(radius) {
+        this.radius = radius; // adding new property to an empty object.
+        this.draw = function() {
+            console.log('draw');
+        }
+    }
+
+*'this' is a reference to the object executing this code. 'this' refers to a blank object.
+*In JS, objects are dynamic. We can always add properties and methods in them.
+*Constructor function returns an object.
+
+-Creation of object using above Constructor function:
+
+    const circle = new Circle(1);
+
+#Dynamic nature of Object-
+
+-We can add / modify properties in object.
+-To remove any property we use 'delete' keyword.
+
+for example-
+    const circle = {
+        radius : 1
+    };
+
+    circle.color = 'yellow',
+    circle.draw = function() {}
+
+    delete circle.color;
+    delete circle.draw;
+
+#Constructor property-
+*Every object in JS has a constructor property and that references to a function that was used to construct or create the object.
+
+for example-
+    // Factory Function
+    function createCircle(radius) {
+        return {
+            radius,
+            draw() {
+                console.log('draw');
+            }
+        };
+    }
+    const circle = createCircle(1);
+
+    // Constructor Function
+    function Circle(radius) {
+        this.radius = radius; // adding new property to an empty object.
+        this.draw = function() {
+            console.log('draw');
+        }
+    }
+    const another = new Circle(1);
+
+    another.constructor -> gives the above constructor function 'Circle()'
+
+    circle.constructor -> gives another construction function 'Object()'
+
+-let x = {};
+*JS will interpret this as-
+    let x = new Object();
+
+-Other construction function:
+    new String(); // "",'',``
+    new Boolean(); // true, false
+    new Number(); // 1,2,3,...
+
+//To be Comtinued...
+
+
