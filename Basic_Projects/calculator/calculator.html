@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator v1</title>
+    <link rel="stylesheet" href="./calculator.css" />
+  </head>
+  <body>
+    <center class="container">
+      <h1>Calculator</h1>
+      <input type="text" class="inputbox" id="display" />
+      <div class="btn-container">
+        <button
+          class="btn"
+          onclick="
+        currentDisplay = currentDisplay + `1`;
+        display.value = currentDisplay;"
+        >
+          1
+        </button>
+        <button
+          class="btn"
+          onclick="
+        currentDisplay = currentDisplay + `2`;
+        display.value = currentDisplay;"
+        >
+          2
+        </button>
+        <button
+          class="btn"
+          onclick="
+        currentDisplay = currentDisplay + `3`;
+        display.value = currentDisplay;"
+        >
+          3
+        </button>
+        <button
+          class="btn"
+          onclick="
+        currentDisplay = currentDisplay + `+`;
+        display.value = currentDisplay;
+      "
+        >
+          +
+        </button>
+        <button
+          class="btn"
+          onclick="
+        currentDisplay = currentDisplay + `4`;
+        display.value = currentDisplay;"
+        >
+          4
+        </button>
+        <button
+          class="btn"
+          onclick="
+        currentDisplay = currentDisplay + `5`;
+        display.value = currentDisplay;"
+        >
+          5
+        </button>
+        <button
+          class="btn"
+          onclick="
+        currentDisplay = currentDisplay + `6`;
+        display.value = currentDisplay;"
+        >
+          6
+        </button>
+        <button
+        class="btn"
+        onclick="
+      currentDisplay = currentDisplay + `-`;
+      display.value = currentDisplay;
+    "
+      >
+        -
+      </button>
+
+        
+        <button
+          class="btn"
+          onclick="
+          currentDisplay = currentDisplay + `7`;
+          display.value = currentDisplay;
+        "
+        >
+          7
+        </button>
+        <button
+          class="btn"
+          onclick="
+        currentDisplay = currentDisplay + `8`;
+        display.value = currentDisplay;"
+        >
+          8
+        </button>
+        <button
+          class="btn"
+          onclick="
+        currentDisplay = currentDisplay + `9`;
+        display.value = currentDisplay;"
+        >
+          9
+        </button>
+        <button
+          class="btn"
+          onclick="
+        currentDisplay = currentDisplay + `*`;
+        display.value = currentDisplay;
+      "
+        >
+          x
+        </button>
+        
+        <button
+          class="btn"
+          onclick="
+          currentDisplay = currentDisplay + `%`;
+          display.value = currentDisplay;
+        "
+        >
+          %
+        </button>
+        
+        
+       
+        
+        
+
+        <button
+          class="btn"
+          onclick="
+        currentDisplay = currentDisplay + `0`;
+        display.value = currentDisplay;"
+        >
+          0
+        </button>
+        <button
+          class="btn"
+          onclick="
+        currentDisplay = currentDisplay + `.`;
+        display.value = currentDisplay;
+      "
+        >
+          .
+        </button>
+        <button
+          class="btn"
+          onclick="
+          currentDisplay = currentDisplay + `/`;
+          display.value = currentDisplay;
+        "
+        >
+          /
+        </button>
+        <button
+          class="btn"
+          onclick="
+          currentDisplay = '';
+          display.value = currentDisplay;
+          "
+        >
+          C
+        </button>
+        <button
+          class="btn"
+          onclick="
+        currentDisplay = eval(currentDisplay);
+        display.value = currentDisplay;"
+        >
+          =
+        </button>
+      </div>
+    </center>
+    <script src="./calculator.js"></script>
+  </body>
+</html>
