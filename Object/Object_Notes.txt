@@ -57,7 +57,7 @@ for example-
 
 #Object Creation-
 
--In Javascript, functions are created using 2 ways:
+-In Javascript, Objects are created using 2 ways:
     -Factory function
     -Constructor function
 
