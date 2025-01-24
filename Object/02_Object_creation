@@ -1,0 +1,41 @@
+
+    function createCircle() {
+        return {
+            radius : 1,
+            draw : function() {
+                console.log('draw');
+            }
+        };
+    }
+
+
+
+    function createCircle(radius) {
+        return {
+            radius,
+            draw() {
+                console.log('draw');
+            }
+        };
+    }
+//Factory function:
+    
+    const circle1 = createCircle(); // 1 is passed as an argument to Factory function.
+    const circle2 = createCircle(2);
+
+    console.log(circle1);
+    console.log(circle2);
+    
+
+// #Constructor Function-
+
+    function Circle(radius) {
+        this.radius = radius; // adding new property to an empty object.
+        this.draw = function() {
+            console.log('draw');
+        }
+    }
+
+    const circle3 = new Circle(5);
+    console.log(circle3);
+    
