@@ -178,6 +178,33 @@ for example-
     new Boolean(); // true, false
     new Number(); // 1,2,3,...
 
+#Cloning an Object-
+
+we can clone the properties and methods of an object to another by following ways:
+
+#first-
+
+const circle = {
+    radius: 1,
+    draw() {
+        console.log('draw');
+    }
+};
+
+const another = {};
+for (let key in circle) {
+    another[key] = circle[key];
+}
+
+#second-
+
+const another = Object.assign({}, circle);
+
+#third-
+
+const another = { ...circle };
+
+
 //To be Comtinued...
 
 
