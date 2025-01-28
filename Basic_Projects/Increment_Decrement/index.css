@@ -1,0 +1,12 @@
+#btn {
+    padding: 10px 30px;
+    background-color: rgb(42, 151, 159);
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#container {
+    text-align: center;
+}
+
